@@ -1,0 +1,28 @@
+-- Create a bookstore database
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, genre TEXT, price INTEGER, quantity INTEGER, quality TEXT);
+
+INSERT into books VALUES (1, "ATYD", "Fanfiction", 22, 18, "new"); 
+INSERT into books VALUES (2, "Sandman", "Comicbook", 24, 6, "like new");
+INSERT into books VALUES (3, "Nancy Drew", "Mystery", 16, 3, "used");
+INSERT into books VALUES (4, "Superman", "Comicbook", 13, 9, "used");
+INSERT into books VALUES (5, "Six of Crows", "Young Adult", 26, 2, "new");
+INSERT into books VALUES (6, "Shadow and Bone", "Young Adult", 13, 8, "like new");
+INSERT into books VALUES (7, "Lord of the Rings", "Fantasy", 22,6, "new");
+INSERT into books VALUES (8, "The Hobbit", "Fantasy", 22, 6, "used");
+INSERT into books VALUES (9, "I'm With the Band", "Autobiography", 27, 9, "used");
+INSERT into books VALUES (10, "Daisy Jones and the Six", "Fiction", 23, 7, "new");
+INSERT into books VALUES (11, "Atomic Habits", "Self Help", 12, 4, "like new");
+INSERT into books VALUES (12, "It Ends With Us", "Romance", 15, 6, "used");
+INSERT into books VALUES (13, "Verity", "Mystery", 15, 8, "new");
+INSERT into books VALUES (14, "Things We Never Got Over", "Romance", 18, 9, "used");
+INSERT into books VALUES (15, "The Silent Patient", "Mystery", 23, 5, "new");
+
+-- Display all
+SELECT * FROM books;
+
+-- Display the database where quantity is greater than 4 and ordered by price
+SELECT * FROM books where quantity > 4 ORDER BY price;
+
+-- What is the average price of a book?
+SELECT AVG (price) FROM books 
